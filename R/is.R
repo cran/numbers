@@ -4,12 +4,8 @@
 
 
 isNatural <- function(n) {
-    if (!is.na(n) && is.numeric(n) && length(n) == 1 && 
-        floor(n) == ceiling(n) && n >= 1 && n <= 2^53 - 1) {
-        TRUE
-    } else {
-        FALSE
-    }
+    stopifnot(is.numeric(n))
+    floor(n) == ceiling(n) & n >= 1 & n <= 2^53 - 1
 }
 
 

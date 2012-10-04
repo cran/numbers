@@ -24,3 +24,31 @@ fibonacci <- function(n, sequence = TRUE) {
     }
     return(fib)
 }
+
+
+zeck <- function(n) {
+    stopifnot(is.numeric(n))
+    if (!isNatural(n) || length(n) != 1)
+        stop("Argument 'n' must be an integer.")
+
+    Fib <- c(1, 2)
+    k <- 2
+    f <- 3
+    while (f <= n) {
+        Fib <- c(Fib, f)
+        f <- Fib[k] + f
+        k <- k + 1
+    }
+
+    fib <- Fib
+    K <- c()
+    while (n > 0) {
+        K <- c(K, k)
+        n <- n - fib[k]
+        fib <- fib[fib <= n]
+        k <- length(fib)
+    }
+
+    K <- rev(K)
+    return(list(fibs = Fib[K], inds = K))
+}

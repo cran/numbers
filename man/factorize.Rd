@@ -22,9 +22,8 @@
   \code{\link{isPrime}, \link{Primes}}
 }
 \examples{
-\dontrun{
   factorize(1002001)       # 7  7  11  11  13  13
   factorize(65537)         # is prime
   # Euler's calculation
-  factorize(2^32 + 1)      # 641  6700417}
+  factorize(2^32 + 1)      # 641  6700417
 }

@@ -1,0 +1,45 @@
+------------------------------------------------------------------------------
+  numbers                                                               NEWS
+------------------------------------------------------------------------------
+
+
+Version 0.3.1 (2012-10-04)
+
+  o chinese() Chinese Remainder Theorem.
+  o egypt_methods(), egypt_complete() Egyptian fractions
+  o zeck() Zeckendorf representation
+
+  o Improving modular arithmetics:
+      - mod(), rem(), div().
+
+Version 0.2.1 (2012-09-25)
+
+  o agm() algebraic-geometric mean.
+  o fibonacci() Fibonacci sequence.
+  o droplet_e() for generating digits of e.
+
+  o Modular functions:
+      - modinv(), modlin() modular inverses;
+      - primroot() primitive roots.
+
+  o Greatest common divisor, least common multiple:
+      - extGCD(), GCD(), mGCD(), LCM(), coprime().
+
+Version 0.1.1 (2012-09-24)
+
+  o More Number-theoretic functions:
+      - eulersPhi; moebius(), mertens();
+      - sigma(), tau(), omega(), Omega().
+
+  o Shifted number-theoretic functions from 'pracma' to 'numbers':
+      - contFrac() continuous fractions;
+      - ratFarey() rational approximation through Farey sequence.
+
+  o Prime number functions:
+      - primeSieve(), Primes(), isPrime(), factorize();
+      - twinPrimes(), nextPrime(), previousPrime();
+      - isNatural(), isIntpower().
+
+  o New package 'numbers' on R-Forge.
+
+------------------------------------------------------------------------------

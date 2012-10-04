@@ -78,7 +78,7 @@ nextPrime <-function(n) {
         n <- n + d1 + 1
         P  <- Primes(n, n + d1)
     }
-    return( min(P) )
+    return( as.numeric(min(P)) )
 }
 
 
@@ -100,5 +100,5 @@ previousPrime <-function(n) {
         n <- n - d1 - 1
         P  <- Primes(n - d1, n)
     }
-    return( max(P) )
+    return( as.numeric(max(P)) )
 }

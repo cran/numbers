@@ -44,6 +44,6 @@ fibo <- function(n) {
 fibo(30:33)                             # 1346269 2178309 3524578 5702887
 
 # Compare recursive with iterative approach:
-# system.time(F30 <- fibonacci(30))                       # user: 17.075 s
+# system.time(F30 <- fibonacci(30, sequence = FALSE)      # user: 17.075 s
 # system.time(F30 <- fibonacci(30, sequence = TRUE)[30])  # user:  0.006 s
 }

@@ -4,27 +4,61 @@
 
 mod <- function(n, m) {
     stopifnot(is.numeric(n), is.numeric(m))
-    if (length(m) != 1 || floor(m) != ceiling(m))
-        stop("Argument 'm' must be an integer scalar.")
-    if (m == 0) return(n)
-    else        return(n %% m)
+    if (length(n) == 1) {
+        n <- rep(n, length(m))
+    } else if (length(m) == 1) {
+        m <- rep(m, length(n))
+    }
+    ln <- length(n); lm <- length(m)
+    if (ln != lm)
+        stop("Arguments 'n', 'm' must be scalars or have the same length.")
+    if (any(floor(n) != ceiling(n)) || any(floor(m) != ceiling(m)))
+        stop("Arguments 'n', 'm' must be integers or vectors of integers.")
+
+    k <- ifelse(m != 0, n %% m, n)
+    return(k)
 }
 
 
 rem <- function(n, m) {
     stopifnot(is.numeric(n), is.numeric(m))
-    if (length(m) != 1 || floor(m) != ceiling(m))
-        stop("Argument 'm' must be an integer scalar.")
-    if (m == 0) return(NaN)
-    k <- mod(n, m)
-    if (sign(n) * sign(m) < 0) {
-        k <- k - m
+    if (length(n) == 1) {
+        n <- rep(n, length(m))
+    } else if (length(m) == 1) {
+        m <- rep(m, length(n))
     }
+    ln <- length(n); lm <- length(m)
+    if (ln != lm)
+        stop("Arguments 'n', 'm' must be scalars or have the same length.")
+    if (any(floor(n) != ceiling(n)) || any(floor(m) != ceiling(m)))
+        stop("Arguments 'n', 'm' must be integers or vectors of integers.")
+
+    k <- ifelse(m != 0, n %% m, NaN)
+    k <- ifelse(m != 0 & sign(n) != sign(m) & k != 0, k - m, k)
+    return(k)
+}
+
+
+div <- function(n, m) {
+    stopifnot(is.numeric(n), is.numeric(m))
+    if (length(n) == 1) {
+        n <- rep(n, length(m))
+    } else if (length(m) == 1) {
+        m <- rep(m, length(n))
+    }
+    ln <- length(n); lm <- length(m)
+    if (ln != lm)
+        stop("Arguments 'n', 'm' must be scalars or have the same length.")
+    if (any(floor(n) != ceiling(n)) || any(floor(m) != ceiling(m)))
+        stop("Arguments 'n', 'm' must be integers or vectors of integers.")
+
+    k <- n %/% m
     return(k)
 }
 
 
 modinv <- function(n, m) {
+    stopifnot(is.numeric(n), is.numeric(m))
     v <- extGCD(n, m)
     if (v[1] == 0 || v[1] > 1) return(NA)
     if (v[2] >= 0) v[2] else v[2] + m
