@@ -3,6 +3,12 @@
 ------------------------------------------------------------------------------
 
 
+Version 0.3.3 (2012-11-20)
+
+  o hermite_NF() Hermite normal form.
+  o lucas() Lucas numbers as sequence 1,...,n.
+  o Added corrections to mGCD() and mLCM().
+
 Version 0.3.1 (2012-10-04)
 
   o chinese() Chinese Remainder Theorem.
@@ -23,7 +29,7 @@ Version 0.2.1 (2012-09-25)
       - primroot() primitive roots.
 
   o Greatest common divisor, least common multiple:
-      - extGCD(), GCD(), mGCD(), LCM(), coprime().
+      - extGCD(), GCD(), mGCD(), LCM(), mLCM(), coprime().
 
 Version 0.1.1 (2012-09-24)
 

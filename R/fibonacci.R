@@ -26,6 +26,19 @@ fibonacci <- function(n, sequence = TRUE) {
 }
 
 
+lucas <- function(n) {
+    if (!is.numeric(n) || length(n) != 1 || floor(n) != ceiling(n) || n < 0)
+        stop("Argument 'n' must be a single integer >= 0.")
+    if (n == 0) return(c(2))
+    if (n == 1) return(c(1))
+    if (n == 2) return(c(1, 3))
+
+    fib <- fibonacci(n, sequence = TRUE)
+    luc <- fib + c(0, 1, fib[1:(n-2)])
+    return(luc)
+}
+
+
 zeck <- function(n) {
     stopifnot(is.numeric(n))
     if (!isNatural(n) || length(n) != 1)

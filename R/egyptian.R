@@ -74,7 +74,11 @@ egyptian_methods <- function(a, b) {
 	    if (isPrime(b) && b < 12) {
 		    f <- c(b, b+1, b*(b+1))
 		    print_eg(a, b, f)
-		    cat("  (Rhind Papyros)\n")
+    	    cat("  (Rhind Papyros)\n")
+    	} else if (isPrime(b)) {
+    	    f <- b * c(1, 2, 3, 6)
+		    print_eg(a, b, f)
+    	    cat("  (Rhind Papyros)\n")
 		} else {
 		    fctrs <- factorize(b)
 		    if (length(fctrs) == 2 && all(isPrime(fctrs))) {
@@ -115,3 +119,31 @@ egyptian_methods <- function(a, b) {
 	print_eg(a0, b0, res)
 	cat("  (Golomb-Farey)\n")
 }
+
+
+##  TODO
+# Extract the classical approaches into a subfunction called by main
+# Add the following Papyros ideas
+# (cf. http://en.wikipedia.org/wiki/Egyptian_fraction):
+#
+#   n/(p*q) = 1/(p*r) + 1/(q*r) with r = (p+q)/n, if possible (e.g., p = 1)
+#   # example: 2/37 = 1/24 + 1/111 + 1/296, A = 24 (Ahmes)
+#
+#   2/p = 1/A + 1/(A*p)         where 2*A = p+1, p <= 20
+#   # example: 2/13 = 1/7 + 1/91, A = 7
+#
+#   3/p = 1/p + 2/p, ...
+#
+# Add the following modern methods to egyptian_methods:
+#
+#   - greedy
+#   - Bleicher-Erdös
+#   - Tenenbaum-Yokota
+#   - continued fractions
+#
+# define a 'best' measure like "geometricMean(f)", f the vector of 
+# denominators, and introduce an option to retrieve this best solution.
+#
+
+
+

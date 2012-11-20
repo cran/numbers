@@ -2,6 +2,7 @@
 \alias{GCD}
 \alias{LCM}
 \alias{mGCD}
+\alias{mLCM}
 \title{GCD and LCM Integer Functions}
 \description{
   Greatest common divisor and least common multiple
@@ -11,6 +12,7 @@ GCD(n, m)
 LCM(n, m)
 
 mGCD(x)
+mLCM(x)
 }
 \arguments{
   \item{n, m}{integer scalars.}
@@ -43,4 +45,6 @@ LCM(46368, 75025)  # = 46368 * 75025
 
 mGCD(c(2, 3, 5, 7) * 11)
 mGCD(c(2*3, 3*5, 5*7))
+mLCM(c(2, 3, 5, 7) * 11)
+mLCM(c(2*3, 3*5, 5*7))
 }

@@ -30,9 +30,6 @@ primroot(m)
   Arndt, J. (2010). Matters Computational: Ideas, Algorithms, Source Code.
   Springer-Verlag, Berlin Heidelberg Dordrecht.
 }
-\author{
-  HwB  <hwborchers@googlemail.com>
-}
 \note{
   This function is \emph{not} vectorized.
 }

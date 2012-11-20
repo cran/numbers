@@ -1,4 +1,4 @@
-\name{chinese}
+\name{chinese remainder theorem}
 \alias{chinese}
 \title{Chinese Remainder Theorem}
 \description{
