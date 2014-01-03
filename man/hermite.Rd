@@ -19,7 +19,7 @@ hermiteNF(A)
   (i) the first r columns are nonzero, the other columns are all zero;\cr
   (ii) The first r diagonal elements are nonzero and d[i-1] divides d[i]
        for i = 2,...,r .\cr
-  (iii) All entries to the left of nonzero diagonal elements are                                 non-negative\cr
+  (iii) All entries to the left of nonzero diagonal elements are non-negative\cr
         and strictly less than the corresponding diagonal entry.
 
   The lower-triangular Hermite normal form of A is obtained by the following 

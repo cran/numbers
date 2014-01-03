@@ -27,7 +27,7 @@
   vector of integers representing prime numbers
 }
 \seealso{
-  \code{\link{isPrime}, \link{factorize}}
+  \code{\link{isPrime}}, \code{\link{factorize}}, \code{pracma::expint1}
 }
 \examples{
 Primes(1000)

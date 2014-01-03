@@ -2,11 +2,30 @@
   numbers                                                               NEWS
 ------------------------------------------------------------------------------
 
+Version 0.4.5 (2014-01-03)
+
+  o Imports 'gmp'.
+  o Primes() avoids creating additional memory, doubled its speed.
+
+Version 0.4.3 (2013-11-16)
+
+  o legendre_sym() Legendre and Jacobi symbol.
+  o quadratic_residues() lists all quadratic residues.
+
+Version 0.4.1 (2013-03-30)
+
+  o mersenne() computes Mersenne prime numbers.
+  o Renamed factorize() to primeFactors() (avoid masking ...)
+
+Version 0.3.5 (2013-01-12)
+
+  o catalan() Catalan numbers.
+  o pythagorean_triple() generating Pythagorean triples.
 
 Version 0.3.3 (2012-11-20)
 
-  o hermite_NF() Hermite normal form.
-  o lucas() Lucas numbers as sequence 1,...,n.
+  o hermiteNF() Hermite normal form.
+  o lucas() Lucas numbers as sequence.
   o Added corrections to mGCD() and mLCM().
 
 Version 0.3.1 (2012-10-04)

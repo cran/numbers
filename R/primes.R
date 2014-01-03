@@ -48,12 +48,10 @@ Primes <- function(n1 = 1, n2 = NULL) {
     if (n1 == 1) A[1] <- -1
 
     for (p in myPrimes) {
-        a <- numeric(n)
         r <- n1 %% p                                    # rest modulo p
         if (r == 0) { i <- 1 } else { i <- p - r + 1 }  # find next divisible by p
         if (i <= n && N[i] == p) { i <- i + p }         # if it is p itself, skip
-        while (i <= n) { a[i] <- 1; i <- i + p }        # mark those divisible by p
-        A <- A + a
+        while (i <= n) { A[i] <- 1; i <- i + p }        # mark those divisible by p
     }
     return(N[A == 0])
 }

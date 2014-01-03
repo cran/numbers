@@ -5,23 +5,22 @@
   Number-theoretic Functions for R
 }
 \description{
-More about what it does (maybe more than one line)
-~~ A concise (1-5 lines) description of the package ~~
+  Number-theoretic Functions for R
 }
 \details{
 \tabular{ll}{
 Package: \tab numbers\cr
 Type: \tab Package\cr
-Version: \tab 0.2.9\cr
-Date: \tab 2012-10-02\cr
+Version: \tab 0.4.3\cr
+Date: \tab 2013-11-16\cr
 License: \tab GPL (>= 3)\cr
 }
 }
 \author{
-Hans W. Borchers
+Hans Werner Borchers
 
-Maintainer: HwB \email{hwborchers@googlemail.com}
+Maintainer: Hans W. Borchers \email{hwborchers@googlemail.com}
 }
 \references{
-  Hardy and Wright
+  Hardy and Wright. The Theory of Numbers
 }

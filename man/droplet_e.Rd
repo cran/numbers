@@ -25,9 +25,13 @@ droplet_e(n)
 }
 \examples{
 ##  Example
+droplet_e(20)                   # [1] "2.71828182845904523536"
+print(exp(1), digits=20)        # [1]  2.7182818284590450908
+
+\dontrun{
 E <- droplet_e(1002)
 table(strsplit(substring(E, 3, 1002), ""))
 #    0   1   2   3   4   5   6   7   8   9 
-#  100  96  97 109 100  85  99  99 103 112 
+#  100  96  97 109 100  85  99  99 103 112 }
 }
 

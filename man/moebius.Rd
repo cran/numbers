@@ -31,7 +31,7 @@ mertens(n)
   function.
 }
 \seealso{
-\code{\link{factorize}}, \code{\link{eulersPhi}}
+\code{\link{primeFactors}}, \code{\link{eulersPhi}}
 }
 \examples{
 sapply(1:16, moebius)

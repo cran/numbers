@@ -8,7 +8,7 @@ eulersPhi <- function(n) {
         stop("Argument 'n' must be a single positive integers.")
 
     m <- n
-    for (p in unique(factorize(n)))
+    for (p in unique(primeFactors(n)))
         m <- m * (1 - 1/p)
     return(round(m))
 }
@@ -18,7 +18,7 @@ moebius <- function(n) {
     if (!isNatural(n))
         stop("Argument 'n' must be a single positive integers.")
 
-    R <- rle(factorize(n))
+    R <- rle(primeFactors(n))
     if (n == 1) {
         r <- 1
     } else if (max(R$lengths) > 1) {
@@ -45,7 +45,7 @@ sigma <- function(n, k = 1, proper = FALSE) {
         stop("Argument 'k' must be a numeric scalar.")
 
     if (n == 1) return(if (proper) 0 else 1)
-    R <- rle(factorize(n))
+    R <- rle(primeFactors(n))
     P <- 1
     for (i in 1:length(R$values)) {
         ri <- R$values[i]
@@ -79,7 +79,7 @@ omega <- function(n) {
         stop("Argument 'n' must be a single positive integers.")
 
     if (n == 1) 0
-    else length(unique(factorize(n)))
+    else length(unique(primeFactors(n)))
 }
 
 
@@ -88,5 +88,5 @@ Omega <- function(n) {
         stop("Argument 'n' must be a single positive integers.")
 
     if (n == 1) 0
-    else sum(rle(factorize(n))$length)
+    else sum(rle(primeFactors(n))$length)
 }

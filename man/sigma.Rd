@@ -41,7 +41,7 @@ tau(n)
   Works well up to \code{10^9}.
 }
 \seealso{
-\code{\link{factorize}}
+\code{\link{primeFactors}}
 }
 \examples{
 sapply(1:16, sigma, k = 0)

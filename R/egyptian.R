@@ -80,7 +80,7 @@ egyptian_methods <- function(a, b) {
 		    print_eg(a, b, f)
     	    cat("  (Rhind Papyros)\n")
 		} else {
-		    fctrs <- factorize(b)
+		    fctrs <- primeFactors(b)
 		    if (length(fctrs) == 2 && all(isPrime(fctrs))) {
 		        f <- (fctrs[1] + 1)/2 * c(1, fctrs[1]) * fctrs[2]
 		        print_eg(a, b, f)

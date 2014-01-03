@@ -20,7 +20,7 @@
   array of elements 0, 1 with 1 indicating prime numbers
 }
 \seealso{
-  \code{\link{factorize}, \link{Primes}}
+  \code{\link{primeFactors}, \link{Primes}}
 }
 \examples{
   x <- matrix(1:10, nrow=10, ncol=10, byrow=TRUE)

@@ -26,6 +26,22 @@ fibonacci <- function(n, sequence = TRUE) {
 }
 
 
+catalan <- function(n) {
+    if (!is.numeric(n) || length(n) != 1 || floor(n) != ceiling(n) || n < 0)
+        stop("Argument 'n' must be a single integer >= 0.")
+    if (n >= 30)
+        warning("For 'n > 30' this will generate double non-integers.")
+    
+    if (n <= 1) return(c(1))
+    C <- 1
+    # this will generate intermediate integers for n <= 30
+    for (i in 1:(n-1))
+        C <- (n + 1 + i) * C / i
+
+    return(C/n)
+}
+
+
 lucas <- function(n) {
     if (!is.numeric(n) || length(n) != 1 || floor(n) != ceiling(n) || n < 0)
         stop("Argument 'n' must be a single integer >= 0.")
