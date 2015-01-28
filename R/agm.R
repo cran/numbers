@@ -3,19 +3,22 @@
 ##
 
 
-agm <- function(a, b, maxiter = 25, tol = .Machine$double.eps^(1/2)) {
-    stopifnot(is.numeric(a), length(a) == 1, a >= 0,
-              is.numeric(b), length(b) == 1, b >= 0)
+agm <- function(a, b) {
+    stopifnot(is.numeric(a) || is.complex(a),
+              is.numeric(b) || is.complex(b))
+    if (length(a) > 1 || length(b) > 1)
+        stop("Arguments 'a', 'b' must be real or complex scalars.")
+    if (is.numeric(a) && a < 0 || is.numeric(b) && b < 0) {
+        a <- as.complex(a)
+        b <- as.complex(b)
+    }
 
-    niter <- 0
-    while (abs(a-b) >= tol && niter <= maxiter) {
+    while (a != b) {
         a1 <- (a + b) / 2
         b1 <- sqrt(a * b)
         a <- a1
         b <- b1
-        niter <- niter + 1
     }
-    if (niter > maxiter)
-        warning("Maximum number of allowed iterations exceeded.")
-    return(list(agm=(a+b)/2, niter = niter, estim.prec = abs(a-b)))
+    a
 }
+

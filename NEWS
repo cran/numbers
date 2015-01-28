@@ -2,33 +2,54 @@
   numbers                                                               NEWS
 ------------------------------------------------------------------------------
 
-Version 0.4.5 (2014-01-03)
+
+Version 0.5-2 (2015-01-28)
+
+  o miller_rabin() executes the probabilistic Miller-Rabin primality
+    test, faster than isPrime(), but still slower than gmp::isprime().
+
+Version 0.5-1 (2015-01-27)
+
+  o egyptian_complete() returns the number of solutions found.
+  o legendre_sym() returned Boolean nonsense, has been corrected. 
+
+Version 0.4-9 (2014-12-30)
+
+  o ordpn() order of a prime number in n!, i.e. n faculty.
+  o fibonacci() and lucas() corrected; the recursive computation
+    has been replaced by an iterative approach.
+
+Version 0.4-7 (2014-08-03)
+
+  o agm() exact to machine accuracy; returns only the AGM value. 
+
+Version 0.4-5 (2014-01-03)
 
   o Imports 'gmp'.
   o Primes() avoids creating additional memory, doubled its speed.
 
-Version 0.4.3 (2013-11-16)
+Version 0.4-3 (2013-11-16)
 
   o legendre_sym() Legendre and Jacobi symbol.
   o quadratic_residues() lists all quadratic residues.
 
-Version 0.4.1 (2013-03-30)
+Version 0.4-1 (2013-03-30)
 
   o mersenne() computes Mersenne prime numbers.
   o Renamed factorize() to primeFactors() (avoid masking ...)
 
-Version 0.3.5 (2013-01-12)
+Version 0.3-5 (2013-01-12)
 
   o catalan() Catalan numbers.
   o pythagorean_triple() generating Pythagorean triples.
 
-Version 0.3.3 (2012-11-20)
+Version 0.3-3 (2012-11-20)
 
   o hermiteNF() Hermite normal form.
   o lucas() Lucas numbers as sequence.
   o Added corrections to mGCD() and mLCM().
 
-Version 0.3.1 (2012-10-04)
+Version 0.3-1 (2012-10-04)
 
   o chinese() Chinese Remainder Theorem.
   o egypt_methods(), egypt_complete() Egyptian fractions
@@ -37,7 +58,7 @@ Version 0.3.1 (2012-10-04)
   o Improving modular arithmetics:
       - mod(), rem(), div().
 
-Version 0.2.1 (2012-09-25)
+Version 0.2-1 (2012-09-25)
 
   o agm() algebraic-geometric mean.
   o fibonacci() Fibonacci sequence.
@@ -50,7 +71,7 @@ Version 0.2.1 (2012-09-25)
   o Greatest common divisor, least common multiple:
       - extGCD(), GCD(), mGCD(), LCM(), mLCM(), coprime().
 
-Version 0.1.1 (2012-09-24)
+Version 0.1-1 (2012-09-24)
 
   o More Number-theoretic functions:
       - eulersPhi; moebius(), mertens();

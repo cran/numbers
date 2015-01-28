@@ -4,22 +4,20 @@
   Arithmetic-geometric Mean
 }
 \description{
-  The arithmetic-geometric mean of positive numbers.
+  The arithmetic-geometric mean of real or complex numbers.
 }
 \usage{
-agm(a, b, maxiter = 25, tol = .Machine$double.eps^(1/2))
+agm(a, b)
 }
 \arguments{
-  \item{a, b}{Positive numbers.}
-  \item{maxiter}{Maximum number of iterations.}
-  \item{tol}{tolerance; stops when \code{abs(a-b) < tol}.}
+  \item{a, b}{real or complex numbers.}
 }
 \details{
   The arithmetic-geometric mean is defined as the common limit of the two
   sequences \eqn{a_{n+1} = (a_n + b_n)/2} and \eqn{b_{n+1} = \sqrt(a_n b_n)}.
 }
 \value{
-  Returnes one value, the mean of the last two values \code{a}, \code{b}.
+  Returnes one value, the algebraic-geometric mean.
 }
 \references{
   Borwein, J. M., and P. B. Borwein (1998). Pi and the AGM: A Study in
@@ -27,20 +25,20 @@ agm(a, b, maxiter = 25, tol = .Machine$double.eps^(1/2))
   Edition, A Wiley-interscience publication.
 }
 \note{
-  The AGM is also defined for negative values a and/or b, but then the
-  complex square root has to be taken.
+  The calculation of the AGM is continued until the two values of \code{a} and
+  \code{b} are identical (in machine accuracy).
 }
 \seealso{
   Arithmetic, geometric, and harmonic mean.
 }
 \examples{
 ##  Gauss constant
-1 / agm(1, sqrt(2), tol = 1e-15)$agm  # 0.834626841674073
+1 / agm(1, sqrt(2))  # 0.834626841674073
 
 ##  Calculate the (elliptic) integral 2/pi \int_0^1 dt / sqrt(1 - t^4)
 f <- function(t) 1 / sqrt(1-t^4)
 2 / pi * integrate(f, 0, 1)$value
-1 / agm(1, sqrt(2))$agm
+1 / agm(1, sqrt(2))
 
 ##  Calculate pi with quadratic convergence (modified AGM)
 #   See algorithm 2.1 in Borwein and Borwein

@@ -16,7 +16,7 @@ legendre_sym <- function(a, p) {
 
     } else {
         S <- modpower(a, (p-1)/2, p)
-        S <- is.numeric(S)
+        S <- as.numeric(S)
         if (S != 1) S <- -1
     }
     return(S)

@@ -14,11 +14,11 @@ zeck(n)
   \item{n}{integer.}
 }
 \details{
-  According to Zeckendors theorem from 1972, each integer can be uniquely
+  According to Zeckendorfs theorem from 1972, each integer can be uniquely
   represented as a sum of Fibonacci numbers such that no two of these are 
   consecutive in the Fibonacci sequence.
 
-  The computation is simply the greedy algorith of finding the highest
+  The computation is simply the greedy algorithm of finding the highest
   Fibonacci number below \code{n}, subtracting it and iterating.
 }
 \value{

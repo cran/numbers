@@ -3,7 +3,7 @@
 ##
 
 
-egyptian_complete <- function(a, b) {
+egyptian_complete <- function(a, b, show = TRUE) {
     stopifnot(isNatural(a), isNatural(b), length(a) == 1, length(b) == 1)
 	if (a >= b)
 		stop("Rational number 'a/b' must be smaller than 1.")
@@ -12,9 +12,10 @@ egyptian_complete <- function(a, b) {
 		warning("Arguments 'a', 'b' have a common divisor > 1.")
 	    a <- a/g; b <- b/g
 	}
-	
 	a0 <- a;
 	b0 <- b
+
+    noex <- 0  # no. of examples found
 
     # Define the first fraction: a/b - 1/x1 = a1/b1
 	lb1 <- max(1 + div(b, a), 1)
@@ -25,7 +26,9 @@ egyptian_complete <- function(a, b) {
 		a1 <- a1/g; b1 <- b1/g
 		if (b1 == x1) next
 		if (a1 == 1) {
-			cat("1/", x1, " + ", "1/", b1, "\n", sep = "")
+            if (show)
+			    cat("1/", x1, " + ", "1/", b1, "\n", sep = "")
+            noex <- noex + 1
 		} else {
 
             # Define the second fraction: a/ - 1/x1 - 1/x2 = a2/b2
@@ -36,11 +39,15 @@ egyptian_complete <- function(a, b) {
 				g <- GCD(a2, b2)
 				a2 <- a2/g; b2 <- b2/g
 				if (x1 == x2 || b2 == x2) next
-				if (a2 == 1)
-				    cat("1/", x1, " + ", "1/", x2, " + ", "1/", b2, "\n", sep = "")
+				if (a2 == 1) {
+                    if (show)
+				        cat("1/", x1, " + ", "1/", x2, " + ", "1/", b2, "\n", sep = "")
+                    noex <- noex + 1
+				}
 			}
 		}
 	}
+    invisible(noex)
 }
 
 
@@ -137,7 +144,7 @@ egyptian_methods <- function(a, b) {
 # Add the following modern methods to egyptian_methods:
 #
 #   - greedy
-#   - Bleicher-Erdös
+#   - Bleicher-Erdos
 #   - Tenenbaum-Yokota
 #   - continued fractions
 #
