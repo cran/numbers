@@ -31,3 +31,9 @@ primeFactors <- function(n) {
 
     return(f)
 }
+
+
+radical <- function(n) {
+    prod(unique(primeFactors(n)))
+}
+

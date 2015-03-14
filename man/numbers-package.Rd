@@ -2,7 +2,7 @@
 \alias{numbers-package}
 \docType{package}
 \title{
-  Number-theoretic Functions for R
+  Number-Theoretic Functions for R
 }
 \description{
   Number-theoretic Functions for R

@@ -1,8 +1,8 @@
 Package: numbers
 Type: Package
-Title: Number-theoretic Functions
-Version: 0.5-2
-Date: 2015-01-28
+Title: Number-Theoretic Functions
+Version: 0.5-6
+Date: 2015-03-14
 Author: Hans Werner Borchers
 Maintainer: Hans W. Borchers <hwborchers@googlemail.com>
 Depends: R (>= 3.0.0)
@@ -12,8 +12,8 @@ Description:
 License: GPL (>= 3)
 Repository: CRAN
 Repository/R-Forge/Project: optimist
-Repository/R-Forge/Revision: 374
-Repository/R-Forge/DateTimeStamp: 2015-01-27 22:58:35
-Date/Publication: 2015-01-28 07:51:20
-Packaged: 2015-01-27 23:05:38 UTC; rforge
+Repository/R-Forge/Revision: 381
+Repository/R-Forge/DateTimeStamp: 2015-03-13 10:21:57
+Date/Publication: 2015-03-14 08:14:58
+Packaged: 2015-03-13 10:25:14 UTC; rforge
 NeedsCompilation: no
