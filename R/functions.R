@@ -6,6 +6,7 @@
 eulersPhi <- function(n) {
     if (!isNatural(n))
         stop("Argument 'n' must be a single positive integers.")
+    if (n == 1) return(1)
 
     m <- n
     for (p in unique(primeFactors(n)))
@@ -38,7 +39,7 @@ mertens <- function(n) {
 }
 
 
-sigma <- function(n, k = 1, proper = FALSE) {
+Sigma <- function(n, k = 1, proper = FALSE) {
     if (!isNatural(n))
         stop("Argument 'n' must be a single positive integers.")
     if (!is.numeric(k) || length(k) != 1)
@@ -66,9 +67,9 @@ tau <- function(n) {  # Ramanujan's tau function
     else {
         s <- 0
         for (k in 1:(n-1)) {
-            s <- s + sigma(k, 5)*sigma(n-k, 5)
+            s <- s + Sigma(k, 5)*Sigma(n-k, 5)
         }
-        s <- 65/756 * sigma(n, 11) + 691/756 * sigma(n, 5) - 691/3 * s
+        s <- 65/756 * Sigma(n, 11) + 691/756 * Sigma(n, 5) - 691/3 * s
     }
     return(s)
 }

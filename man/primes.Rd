@@ -1,24 +1,31 @@
 \name{Primes}
 \alias{Primes}
+\alias{atkin_sieve}
 \title{Prime Numbers}
 \description{
-  Generate a list of prime numbers less or equal \code{n}, resp. between
-  \code{n1} and \code{n2}.
+  Eratosthenes resp. Atkin sieve methods to generate a list of prime numbers
+  less or equal \code{n}, resp. between \code{n1} and \code{n2}.
 }
 \usage{
   Primes(n1, n2 = NULL)
+
+  atkin_sieve(n)
 }
 \arguments{
-  \item{n1, n2}{natural numbers with \code{n1 <= n2}.}
+  \item{n, n1, n2}{natural numbers with \code{n1 <= n2}.}
 }
 \details{
   The list of prime numbers up to \code{n} is generated using the "sieve of
-  Erasthostenes". This approach is reasonably fast, but may require a lot of
+  Eratosthenes". This approach is reasonably fast, but may require a lot of
   main memory when \code{n} is large.
 
   \code{Primes} computes first all primes up to \code{sqrt(n2)} and then
   applies a refined sieve on the numbers from \code{n1} to \code{n2}, thereby
   drastically reducing the need for storing long arrays of numbers.
+
+  The sieve of Atkins is a modified version of the ancient prime number sieve 
+  of Eratosthenes. It applies a modulo-sixty arithmetic and requires less
+  memory, but in R is not faster because of a double for-loop.
 
   In double precision arithmetic integers are represented exactly only up to
   2^53 - 1, therefore this is the maximal allowed value.
@@ -26,12 +33,18 @@
 \value{
   vector of integers representing prime numbers
 }
+\references{
+  A. Atkin and D. Bernstein (2004), Prime sieves using quadratic forms.
+  Mathematics of Computation, Vol. 73, pp. 1023-1030.
+}
 \seealso{
-  \code{\link{isPrime}}, \code{\link{factorize}}, \code{pracma::expint1}
+  \code{\link{isPrime}}, \code{gmp::factorize}, \code{pracma::expint1}
 }
 \examples{
 Primes(1000)
 Primes(1949, 2019)
+
+atkin_sieve(1000)
 
 \dontrun{
 ##  Appendix:  Logarithmic Integrals and Prime Numbers (C.F.Gauss, 1846)

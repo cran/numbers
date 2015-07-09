@@ -3,7 +3,7 @@
 ##
 
 
-rabin_miller <- function(n) {
+miller_rabin <- function(n) {
     stopifnot(is.numeric(n), length(n) == 1)
     if (floor(n) != ceiling(n) || n <= 0) {
         stop("Argument 'n' must be a natural number.")
@@ -14,6 +14,11 @@ rabin_miller <- function(n) {
     } else if (n >= 2^53) {
         stop("Argument 'n' too large to be handled as integer.")
     }
+
+    if (!requireNamespace("gmp", quietly = TRUE)) {
+        stop("Package 'gmp' needed: Please install separately.", call. = FALSE)
+    }
+
 
     # define witnesses (see Miller-Rabin test at Wolfram MathWorld)
     if (n < 2047) {

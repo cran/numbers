@@ -10,6 +10,11 @@ mersenne <- function(p) {
     if (p == 2)
         return(TRUE)
 
+    if (!requireNamespace("gmp", quietly = TRUE)) {
+        stop("Package 'gmp' needed: Please install separately.", call. = FALSE)
+    }
+
+
     z2 <- gmp::as.bigz(2)
     z4 <- z2 * z2
     zp <- gmp::as.bigz(p)

@@ -8,33 +8,23 @@ modpower <- function(n, k, m) {
               is.numeric(k), floor(k) == ceiling(k), n >= 0,
               is.numeric(m), floor(m) == ceiling(m), m >= 0)
 
+    if (m^2 > 2^53-1)
+        stop("Modulus 'm' > sqrt(2^53-1) too big for integer arithmetic in R.")
     if (k == 0) return(1)
     if (n == 0) return(0)
 
     b <- n %% m
-    if (b > 9e7) {
-        # warning("Integer overflow: value of base 'n' is too big.")
-        n <- gmp::as.bigz(n); m <- gmp::as.bigz(m)
-        k <- gmp::as.bigz(k)
-        b <- n %% m
-    }
     r <- 1
     while (k != 0) {
-        if ( (k %/% 2) * 2 != k )
+        if (k %% 2 == 1) {
             r <- (b * r) %% m
-        k <- k %/% 2
+            k <- k - 1
+        }
+        k <- k / 2
         b <- (b * b) %% m
     }
     return(r)
 }
-
-##  this did not use modular exponentiation
-#   if (k == 0) return(1)
-#   r <- n %% m; k <- k-1
-#   while (k > 0) {
-#       r <- (r*n) %% m; k <- k-1
-#   }
-#   return(r)
 
 
 modorder <- function(n, m) {

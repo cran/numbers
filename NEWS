@@ -3,20 +3,31 @@
 ------------------------------------------------------------------------------
 
 
+Version 0.5-9 (2015-07-09)
+
+  o Changed package 'gmp' status from "Imports:" to "Suggests:";
+    functions miller_rabin() and mersenne() require 'gmp' to be loaded.
+  o sigma() renamed to Sigma() to avoid name clash.
+
+Version 0.5-8 (2015-07-01)
+
+  o atkin_sieve(): Atkin's prime number sieve.
+  o Small bug corrected: eulerPhi(1) == 1 .
+
 Version 0.5-6 (2015-03-14)
 
-   o Pi-day 3.14.15 9:26:53.58 contribution:
-     dropletPi() realizes the droplet/spigot algorithm for pi;
-     droplet_e() has been renamed to dropletE().
+  o Pi-day 3.14.15 9:26:53.58 contribution:
+    dropletPi() realizes the droplet/spigot algorithm for pi;
+    droplet_e() has been renamed to dropletE().
 
 Version 0.5-3 (2015-02-12)
 
-   o radical() computes the radical of n, i.e the product of
-     unique prime factors of n.
+  o radical() computes the radical of n, i.e the product of
+    unique prime factors of n.
 
 Version 0.5-2 (2015-01-28)
 
-  o miller_rabin() executes the probabilistic Miller-Rabin primality
+  o miller-rabin() executes the probabilistic Miller-Rabin primality
     test, faster than isPrime(), but still slower than gmp::isprime().
 
 Version 0.5-1 (2015-01-27)

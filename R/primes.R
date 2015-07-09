@@ -100,3 +100,38 @@ previousPrime <-function(n) {
     }
     return( as.numeric(max(P)) )
 }
+
+
+atkin_sieve <- function(n) {
+    stopifnot(length(n) == 1, floor(n) == ceiling(n), n >= 1)
+
+    if (n <= 4)
+        return(which(c(FALSE, TRUE, TRUE, FALSE)[1:n]))
+
+    sieve <- vector(mode = "logical", length = n)
+    sqrtn <- floor(sqrt(n))
+    for (x in 1:sqrtn) {
+        for (y in 1:sqrtn) {
+            m <- 4*x^2 + y^2
+            if (m <= n && (m %% 12 == 1 || m %% 12 == 5))
+                sieve[m] <- !sieve[m]
+  
+            m <- 3*x^2 + y^2
+            if (m <= n && m %% 12 == 7)
+                sieve[m] <- !sieve[m]
+  
+            m <- 3*x^2 - y^2
+            if (x > y && m <= n && m %% 12 == 11)
+                sieve[m] <- !sieve[m]
+        }
+    }
+    if (n >= 25) {
+        for (x in 5:sqrtn) {
+            if (sieve[x])
+                sieve[seq.int(x^2, n, by = x^2)] <- FALSE
+        }
+    }
+
+    sieve[c(2, 3)] <- TRUE
+    return(which(sieve))
+}

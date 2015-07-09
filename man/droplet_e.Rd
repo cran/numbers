@@ -19,7 +19,7 @@ dropletE(n)
   Based on a formula discovered by S. Rabinowitz and S. Wagon.
 
   The droplet algorithm for pi uses the Euler transform of the alternating
-  Leibniz series and the socalled "radix conversion".
+  Leibniz series and the so-called ``radix conversion".
 }
 \value{
   String containing ``3.1415926..." resp. ``2.718281828..." with
