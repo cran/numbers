@@ -1,13 +1,13 @@
-1cb57f160f36983b87c686cba6041c6b *DESCRIPTION
-feba7fe45816b50c09527a264a9ae2f2 *NAMESPACE
-9fa8dbc539a5dd2b0579dfb94d5e165a *NEWS
+8a46ce4cd68c3c13527ea7fb7f85c43c *DESCRIPTION
+12b21cf347a44201d950ed6ee452b2f9 *NAMESPACE
+40243f0f576d03fccc0b05c3b2f05613 *NEWS
 485ff8b502757d187e195d6ef2dd6e19 *R/agm.R
 fe726552ebe8fc5d075e030a05d6b185 *R/chinese.R
 b91597254d485d23245c6e1f1f9c981e *R/contFrac.R
 b9a6f561dcb52d69a9b68bcc2ab1c2fd *R/droplet.R
 53ffb8f8e121355b55cc386dd605f415 *R/egyptian.R
 3ef37b56fb46fea13dab850a6dcabf60 *R/factorize.R
-987cc443ef972c524ec460c9da663f48 *R/fibonacci.R
+8c2e767c86658cbeace1055239325734 *R/fibonacci.R
 4ddfa68bc5cab12d4023902f8b304137 *R/functions.R
 2932c864a1234f41a63bf9a883de7832 *R/gcd.R
 9fbfb8fe14821abf8a46ad7dc960c685 *R/hermite.R
@@ -24,6 +24,7 @@ c5e815ba92e6bdbae14590fff88b9f8d *R/primroot.R
 5151937344ec997522c3f63d406b6b0c *man/GCD.Rd
 e1faa8ce68e39a947c8b7453ff1ee51b *man/IsIntpower.Rd
 8ddebf98f837ace4d061b84152a19719 *man/agm.Rd
+1b887852212f2bd1c9e5aabd627c79a3 *man/bell.Rd
 25a076bd80bbd7ffee85d227a204840a *man/catalan.Rd
 58b77a8bf9fb61582d7e1192b1c97dea *man/chinese.Rd
 98b89ba49fb15ac15cdf2f4aed6c8ff5 *man/contFrac.Rd
@@ -32,7 +33,7 @@ e1faa8ce68e39a947c8b7453ff1ee51b *man/IsIntpower.Rd
 dba616e1c9e763e495765eacc9294b53 *man/droplet_e.Rd
 a84c8381c1fadac6ddf5afb5ec10f692 *man/egyptian_complete.Rd
 58d538b9fd00e69d6602ab1150570cd6 *man/egyptian_methods.Rd
-b954cf7ddd0a782fd00a6e952281997b *man/eulersPhi.Rd
+a3a728d115e960bc1c1e5a2adc309410 *man/eulersPhi.Rd
 b961024f632017f93d368fd5d5771946 *man/extGCD.Rd
 f774b99417220e04fcdf24b4dd85c687 *man/factorize.Rd
 7c0e2bbc4723d3e221eb158424daed84 *man/fibonacci.Rd
@@ -48,7 +49,7 @@ ca6e3c440ca6b9b726bfc0e206ceb3b5 *man/modlin.Rd
 c8a204776c89e20a97d054a14bd5ba16 *man/moebius.Rd
 b600f706e9d27b6189a6f50ef9f981f5 *man/nextprime.Rd
 b04a97521075281d02788114dcf6fe53 *man/numbers-package.Rd
-4fb90a49846ab20cad614c500ff2970c *man/omega.Rd
+2512a379c365b783153eb9173bd6c566 *man/omega.Rd
 b5d8135c1a15eff94b98d17fd62811f6 *man/ordpn.Rd
 50066134463ca098da2473f3561696cc *man/previousPrime.Rd
 a9aa572d8419fdea1e1912b458022488 *man/primes.Rd

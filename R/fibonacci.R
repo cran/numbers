@@ -67,6 +67,25 @@ lucas <- function(n) {
 }
 
 
+bell <- function(n) {
+    stopifnot(is.numeric(n), length(n) == 1)
+    if (n < 0 || floor(n) != ceiling(n))
+        stop("Argument 'n' must be a whole number greater or equal zero.")
+    if (n == 0 || n == 1) return(1)
+
+    B <- Bneu <- numeric(n)
+    B[1] <- 1
+    for (i in 1:(n-1)) {
+        Bneu[1] <- B[i]
+        for (j in 2:(i+1)) {
+            Bneu[j] <- B[j-1] + Bneu[j-1]
+        }
+    B <- Bneu
+    }
+    Bneu[i+1]
+}
+
+
 zeck <- function(n) {
     stopifnot(is.numeric(n))
     if (!isNatural(n) || length(n) != 1)

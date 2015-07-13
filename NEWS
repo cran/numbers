@@ -3,6 +3,11 @@
 ------------------------------------------------------------------------------
 
 
+Version 0.6-1 (2015-07-13)
+
+  o bell() generates Bell numbers.
+  o Spelling changes in the documentation.
+
 Version 0.5-9 (2015-07-09)
 
   o Changed package 'gmp' status from "Imports:" to "Suggests:";

@@ -1,6 +1,7 @@
 # exportPattern("^[[:alpha:]]+") #
 
 export(agm)
+export(bell)
 export(catalan)
 export(chinese)
 export(contFrac)
