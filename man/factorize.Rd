@@ -33,7 +33,7 @@
   the product of unique prime factors.
 }
 \seealso{
-  \code{gmp::factorize}
+  \code{\link{divisors}}, \code{gmp::factorize}
 }
 \examples{
   primeFactors(1002001)         # 7  7  11  11  13  13

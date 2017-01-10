@@ -3,6 +3,22 @@
 ------------------------------------------------------------------------------
 
 
+Version 0.6-6 (2017-01-10)
+
+  o Extended the description line considerably by request of CRAN.
+
+Version 0.6-5 (2017-01-10)
+
+  o cf2num() converts (generalized) continued fractions to numbers,
+    with special care for approximating infinite fractions.
+
+Version 0.6-3 (2016-12-20)
+
+  o divisors() lists all divisors of a number n from its prime factors.
+  o necklace() and bracelet() compute the number of necklaces resp.
+    bracelets in combinatorics, suggested by David Sterratt.
+  o corrected a 'tiny' bug in modpower(), pointed out by Nathan Carter.
+
 Version 0.6-1 (2015-07-13)
 
   o bell() generates Bell numbers.

@@ -5,7 +5,7 @@
 
 modpower <- function(n, k, m) {
     stopifnot(is.numeric(n), floor(n) == ceiling(n), n >= 0,
-              is.numeric(k), floor(k) == ceiling(k), n >= 0,
+              is.numeric(k), floor(k) == ceiling(k), k >= 0,
               is.numeric(m), floor(m) == ceiling(m), m >= 0)
 
     if (m^2 > 2^53-1)

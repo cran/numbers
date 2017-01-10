@@ -35,3 +35,43 @@ contFrac <- function(x, tol = 1e-6) {
                     prec = abs(x - B[1,1]/B[2,1])))
     }
 }
+
+
+cf2num <- function(a, b = 1, a0 = 0, finite = FALSE) {
+    stopifnot(is.numeric(a), is.numeric(b), is.numeric(a0))
+    n <- length(a)
+    if (length(b) != n) {
+        if (length(b) == 1) b <- rep(b, n)
+    } else if (length(a) != length(b)) {
+        stop("length(a)==length(b) or length(b)==1 required.")
+    }
+    
+    # Calculate CF as an alternating sum
+    q <- numeric(n)  # q_{-1} = 0; q_0 = 1
+    q[1] <- a[1]; q[2] <- a[2]*a[1] + b[2]*1
+    for (j in 3:n) {
+        q[j] <-a[j]*q[j-1] + b[j]*q[j-2]
+    }
+    qq <- c(1, q[1:(n-1)]) * q
+    pp <- (-1)^(0:(n-1)) * cumprod(b)
+    aa <- pp / qq
+    
+    if (finite) {
+        ss <- sum(aa)
+    } else {
+    # Apply Algorithm 1 from Cohen et al. (2000)
+        bb <- 2^(2 * n - 1)
+        cc <- bb
+        ss <- 0
+        for (k in (n-1):0) {
+            tt <- aa[k+1]
+            ss <- ss + cc * tt
+            bb <- bb * (2 * k + 1) * (k + 1)/(2 * (n - k) * (n + k))
+            cc <- cc + bb
+        }
+        ss <- ss / cc
+    }
+    # Don't forget the absolute term
+    return(a0 + ss)
+}
+

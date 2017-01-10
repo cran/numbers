@@ -41,7 +41,7 @@ tau(n)
   Works well up to \code{10^9}.
 }
 \seealso{
-\code{\link{primeFactors}}
+\code{\link{primeFactors}}, \code{\link{divisors}}
 }
 \examples{
 sapply(1:16, Sigma, k = 0)
