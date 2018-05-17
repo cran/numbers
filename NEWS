@@ -3,9 +3,24 @@
 ------------------------------------------------------------------------------
 
 
+Version 0.7-1 (2018-05-16)
+
+  o Removed 'numbers-package.Rd' on request of K. Hornick, CRAN.
+
+Version 0.6-8 (2017-03-26)
+
+  o intnthroot() calculates the integer n-th root.
+
+Version 0.6-7 (2017-01-15)
+
+  o modlog() the modular (or: discrete) logarithm.
+  o primroot() got a new keyword 'all=FALSE' to return all primitive
+    roots if it is TRUE. Also, isPrimroot() with the obvious meaning.
+
 Version 0.6-6 (2017-01-10)
 
   o Extended the description line considerably by request of CRAN.
+  o Finally completed the "?`numbers-package`" entry of the help.
 
 Version 0.6-5 (2017-01-10)
 
@@ -96,10 +111,8 @@ Version 0.3-1 (2012-10-04)
 
   o chinese() Chinese Remainder Theorem.
   o egypt_methods(), egypt_complete() Egyptian fractions
-  o zeck() Zeckendorf representation
-
-  o Improving modular arithmetics:
-      - mod(), rem(), div().
+  o zeck() Zeckendorf representation.
+  o Improving modular arithmetics: mod(), rem(), div().
 
 Version 0.2-1 (2012-09-25)
 

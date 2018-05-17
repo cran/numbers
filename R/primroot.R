@@ -9,7 +9,7 @@ modpower <- function(n, k, m) {
               is.numeric(m), floor(m) == ceiling(m), m >= 0)
 
     if (m^2 > 2^53-1)
-        stop("Modulus 'm' > sqrt(2^53-1) too big for integer arithmetic in R.")
+        stop("Modulus 'm' too big for integer arithmetic in R.")
     if (k == 0) return(1)
     if (n == 0) return(0)
 
@@ -41,27 +41,23 @@ modorder <- function(n, m) {
 }
 
 
-primroot <- function(m) {
+primroot <- function (m, all = FALSE) {
     stopifnot(is.numeric(m), floor(m) == ceiling(m), m >= 0)
-
     if (!isPrime(m)) return(NA)
     if (m == 2) return(1)
-
-    ##  Brute Force:
-    for (r in 2:(m-1)) {
-        k <- modorder(r, m)
-        if (k == m-1) break
+    
+    if (all) {
+        res <- c()
+        for (r in 2:(m-1)) {
+            k <- modorder(r, m)
+            if (k == m-1) res <- c(res, r)
+        }
+    } else {
+        for (r in 2:(m-1)) {
+            k <- modorder(r, m)
+            if (k == m - 1) break
+        }
+        res <- r
     }
-    return(r)
+    return(res)
 }
-
-##  Factorize (m-1):
-# P <- unique(factorize(m-1))
-# for (r in 2:(m-1)) {
-#     x <- TRUE
-#     for (p in P) {
-#         if (modpower(r, (m-1)/p, m) == 1) x <- FALSE
-#     }
-#     if (isTRUE(x)) return(r)
-# }
-# stop("No prim root found.")

@@ -50,3 +50,15 @@ isIntpower <- function(p) {
     }
     return(c(p, 1))
 }
+
+
+isPrimroot <- function(g, p) {
+    stopifnot(is.numeric(g), floor(g) == ceiling(g),
+              is.numeric(p), floor(p) == ceiling(p))
+    if (!isPrime(p)) return(FALSE)
+    if (modorder(g, p) == p-1) {
+        return(TRUE)
+    } else {
+        return(FALSE)
+    }
+}

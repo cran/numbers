@@ -4,13 +4,14 @@
   Primitive Root
 }
 \description{
-  Find the smallest primitive root modulo m.
+  Find the smallest primitive root modulo m, or find all primitive roots.
 }
 \usage{
-primroot(m)
+primroot(m, all = FALSE)
 }
 \arguments{
   \item{m}{A prime integer.}
+  \item{all}{boolean; shall all primitive roots module p be found.}
 }
 \details{
   For every prime number \eqn{m} there exists a natural number \eqn{n} that
@@ -18,7 +19,7 @@ primroot(m)
   all different.
 
   The computation here is all brute force. As most primitive roots are
-  relatively small, it is still reasonable fast.
+  relatively small, so it is still reasonable fast.
 
   One trick is to factorize \eqn{m-1} and test only for those prime factors.
   In R this is not more efficient as factorization also takes some time.
