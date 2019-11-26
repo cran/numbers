@@ -73,7 +73,7 @@ coprime <- function(n, m) {
 
 mGCD <- function(x) {
     stopifnot(is.numeric(x))
-    if (floor(x) != ceiling(x) || length(x) < 2)
+    if (any(floor(x) != ceiling(x)) || length(x) < 2)
         stop("Argument 'x' must be an integer vector of length >= 2.")
 
     x <- x[x != 0]
@@ -97,7 +97,7 @@ mGCD <- function(x) {
 
 mLCM <- function(x) {
     stopifnot(is.numeric(x))
-    if (floor(x) != ceiling(x) || length(x) < 2)
+    if (any(floor(x) != ceiling(x)) || length(x) < 2)
         stop("Argument 'x' must be an integer vector of length >= 2.")
 
     x <- x[x != 0]

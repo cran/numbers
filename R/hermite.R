@@ -23,29 +23,29 @@ hermiteNF <- function(A) {
                 k <- which.min(abs(H[i, S]))  # find smallest non-zero entry
                 if (S[k] != p) {
                     index <- 1:n; index[p] <- S[k]; index[S[k]] <- p
-                    H <- H[, index]  # exchange columns i and k
-                    U <- U[, index]  # exchange columns i and k
+                    H <- H[, index, drop=FALSE]  # exchange columns i and k
+                    U <- U[, index, drop=FALSE]  # exchange columns i and k
                 }
                 if (p < n) {
                     for (j in (p+1):n) {
                         q <- round(H[i,j]/H[i,p])
-                        H[, j] <- H[, j] - q * H[, p]
-                        U[ ,j] <- U[, j] - q * U[, p]
+                        H[, j] <- H[, j, drop=FALSE] - q * H[, p, drop=FALSE]
+                        U[ ,j] <- U[, j, drop=FALSE] - q * U[, p, drop=FALSE]
                     }
                 }
                 if ( p >= n || length(which(H[i, (p+1):n] != 0)) == 0 ) {
                     finished <- TRUE
                     # flip the sign of H[i, ] if necessary
                     if (H[i, p] < 0) {
-                        H[, p] <- -H[, p]
-                        U[, p] <- -U[, p]
+                        H[, p] <- -H[, p, drop=FALSE]
+                        U[, p] <- -U[, p, drop=FALSE]
                     }
                     # reduce the entries to the left of H[i, i]
                     if (p > 1) {
                         for (j in 1:(p-1)) {
                             q <- floor(H[i, j] / H[i, p])
-                            H[, j] <- H[, j] - q * H[, p]
-                            U[, j] <- U[, j] - q * U[, p]
+                            H[, j] <- H[, j, drop=FALSE] - q * H[, p, drop=FALSE]
+                            U[, j] <- U[, j, drop=FALSE] - q * U[, p, drop=FALSE]
                         }
                     }
                 }   # end if

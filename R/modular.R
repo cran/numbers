@@ -57,13 +57,6 @@ div <- function(n, m) {
 }
 
 
-modinv <- function(n, m) {
-    stopifnot(is.numeric(n), is.numeric(m))
-    v <- extGCD(n, m)
-    if (v[1] == 0 || v[1] > 1) return(NA)
-    if (v[2] >= 0) v[2] else v[2] + m
-}
-
 modlin <- function(a, b, n) {
     stopifnot(is.numeric(a), is.numeric(b), is.numeric(n))
     if (length(a) != 1 || length(b) != 1 || length(n) != 1 ||

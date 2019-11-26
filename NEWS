@@ -3,6 +3,19 @@
 ------------------------------------------------------------------------------
 
 
+Version 0.7-5 (2019-11-26)
+
+  o collatz() calculates generalized Collatz sequences.
+
+Version 0.7-4 (2019-08-03)
+
+  o "length > 1 in coercion to logical" error corrected in mGCD() and mLCM().
+  o Corrected hermiteNF(), suggested by Martin Hoffmann.
+
+Version 0.7-3 (2018-12-02)
+
+  o modsqrt() calculates the square root modulo primes.
+
 Version 0.7-1 (2018-05-16)
 
   o Removed 'numbers-package.Rd' on request of K. Hornick, CRAN.
