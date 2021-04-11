@@ -30,7 +30,7 @@
   No return value, all solutions found will be printed to the console.
 }
 \references{
-  \url{http://www.ics.uci.edu/~eppstein/numth/egypt/}
+  \url{https://www.ics.uci.edu/~eppstein/numth/egypt/}
 }
 \seealso{
   \code{\link{egyptian_complete}}

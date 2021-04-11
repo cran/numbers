@@ -35,3 +35,24 @@ ratFarey <- function(x, n, upper = TRUE) {
 
     return(F)
 }
+
+
+farey_seq <- function(n) {
+    stopifnot(is.numeric(n), length(n) == 1, 
+              floor(n) == ceiling(n), n >= 1)
+    if (!requireNamespace("gmp", quietly = TRUE)) {
+        stop("Package 'gmp' needed: Please install separately.",
+             call. = FALSE)
+    }
+    F <- c(gmp::as.bigq(c(0)), gmp::as.bigq(1))
+    if (n == 1) return( F )
+    for (k in 2:n) {
+        for (h in 1:(k-1)) {
+            if (gmp::gcd(h, k) == 1) {
+                r <- gmp::as.bigq(h, k)
+                F <- c(F, r)
+            }
+        }
+    }
+    return( sort(F) )
+}

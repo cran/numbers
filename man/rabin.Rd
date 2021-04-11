@@ -20,7 +20,7 @@
   Returns TRUE or FALSE.
 }
 \references{
-  \url{http://mathworld.wolfram.com/Rabin-MillerStrongPseudoprimeTest.html}
+  \url{https://mathworld.wolfram.com/Rabin-MillerStrongPseudoprimeTest.html}
 }
 \note{
   \code{miller_rabin()} will only work if package \code{gmp} has been loaded

@@ -21,7 +21,7 @@ mersenne(p)
   Returns TRUE or FALSE, indicating whether \code{p} is a Mersenne number or not.
 }
 \references{
-  http://mathworld.wolfram.com/Lucas-LehmerTest.html
+  https://mathworld.wolfram.com/Lucas-LehmerTest.html
 }
 \examples{
 mersenne(2)

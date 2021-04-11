@@ -131,7 +131,7 @@ egyptian_methods <- function(a, b) {
 ##  TODO
 # Extract the classical approaches into a subfunction called by main
 # Add the following Papyros ideas
-# (cf. http://en.wikipedia.org/wiki/Egyptian_fraction):
+# (cf. https://en.wikipedia.org/wiki/Egyptian_fraction):
 #
 #   n/(p*q) = 1/(p*r) + 1/(q*r) with r = (p+q)/n, if possible (e.g., p = 1)
 #   # example: 2/37 = 1/24 + 1/111 + 1/296, A = 24 (Ahmes)

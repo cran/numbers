@@ -3,7 +3,8 @@
 \alias{Omega}
 \title{Number of Prime Factors}
 \description{
-  Sum of all exponents of prime factors in the prime decomposition.
+  Number of prime factors resp. sum of all exponents of prime factors
+  in the prime decomposition.
 }
 \usage{
 omega(n)
@@ -13,10 +14,11 @@ Omega(n)
   \item{n}{Positive integer.}
 }
 \details{
-  Compute the number of prime factors of \code{n} resp. the sum of their
-  exponents in the prime decomposition.
+  `omega(n)` returns the number of prime factors of `n` while `Omega(n)`
+  returns the sum of their exponents in the prime decomposition.
+  `omega` and `Omega` are identical if there are no quadratic factors.
 
-  \code{(-1)^Omega(n)} is the Liouville function.
+  Remark: \code{(-1)^Omega(n)} is the Liouville function.
 }
 \value{
   Natural number.

@@ -76,3 +76,21 @@ modlin <- function(a, b, n) {
     }
     return(x)
 }
+
+
+### Rational numbers modulo primes (or composites)
+modq <- function(a, b, k) {
+    stopifnot(is.numeric(a), is.numeric(b), is.numeric(k))
+    if (length(a)!=1 || length(b)!=1 || length(k)!=1)
+        stop("Function 'modq' is *not* vectorized.")
+    if (floor(a)!=ceiling(a) || floor(b)!=ceiling(b) || floor(k)!=ceiling(k))
+        stop("All arguments of 'modq' must be integers.")
+    if (k <= 1)
+        stop("Argument 'k' must be a natural number > 1.")
+    if (!coprime(b, k)) {
+        warning("Arguments 'b' and 'k' must be coprime.")
+        return(NA)
+    }
+    mod(a * modinv(b, k), k)
+}
+

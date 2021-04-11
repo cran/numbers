@@ -3,6 +3,26 @@
 ------------------------------------------------------------------------------
 
 
+Version 0.8-1 (2021-04-11)
+
+  o carmichael() determines Carmichael numbers.
+  o Corrected all old and 'insecure' Internet links with 'https:'.
+
+Version 0.7-9 (2021-04-10)
+
+  o stern_brocot_seq() generates the Stern-Brocot sequence (fast).
+  o farey_seq() generates the full n-th Farey series (slow).
+
+Version 0.7-8 (2021-04-07)
+
+  o bernoulli_numbers() the Bernoulli numbers w/ and w/o 'big rationals'.
+  o pascal_triangle() generates Pascal numbers in a rectangle.
+  o modq() extends the modulo operator to rational numbers.
+
+Version 0.7-6 (2021-03-17)
+
+  o Help clarified for omega() and Omega() functions.
+
 Version 0.7-5 (2019-11-26)
 
   o collatz() calculates generalized Collatz sequences.

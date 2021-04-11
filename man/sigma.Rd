@@ -33,9 +33,9 @@ tau(n)
   Natural number, the number or sum of all divisors.
 }
 \references{
-\code{http://en.wikipedia.org/wiki/Divisor_function}
+\code{https://en.wikipedia.org/wiki/Divisor_function}
 
-\code{http://en.wikipedia.org/wiki/Tau-function}
+\code{https://en.wikipedia.org/wiki/Ramanujan_tau_function}
 }
 \note{
   Works well up to \code{10^9}.

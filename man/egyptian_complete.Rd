@@ -25,7 +25,7 @@
  returns invisibly the number of solutions found. 
 }
 \references{
-  \url{http://www.ics.uci.edu/~eppstein/numth/egypt/}
+  \url{https://www.ics.uci.edu/~eppstein/numth/egypt/}
 }
 \seealso{
   \code{\link{egyptian_methods}}

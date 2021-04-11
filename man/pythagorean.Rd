@@ -25,7 +25,7 @@ pythagorean_triples(c1, c2)
   \code{(m  n  a  b  c)}.
 }
 \references{
-  \url{http://mathworld.wolfram.com/PythagoreanTriple.html}
+  \url{https://mathworld.wolfram.com/PythagoreanTriple.html}
 }
 \examples{
 pythagorean_triples(100, 200)
