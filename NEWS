@@ -3,6 +3,11 @@
 ------------------------------------------------------------------------------
 
 
+Version 0.8-2 (2021-05-13)
+
+  o Removed example for farey_seq() from the 'ratFarey' help page
+    because apparently 'gmp' causes problems for macOS on CRAN servers.
+
 Version 0.8-1 (2021-04-11)
 
   o carmichael() determines Carmichael numbers.

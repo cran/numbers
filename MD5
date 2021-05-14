@@ -1,6 +1,6 @@
-3b12adc98501c244241221b1b8537b3b *DESCRIPTION
+213f20ea5bd95184215fb587ae28acd5 *DESCRIPTION
 a9c76503b7dcb9087309b93a73a94eda *NAMESPACE
-bd528e185dd72901defdf8d9fccb0194 *NEWS
+47120cde19f54633e8485f7c1956444a *NEWS
 485ff8b502757d187e195d6ef2dd6e19 *R/agm.R
 afa6101d39084d17e36196af690b7c7e *R/bernoulli.R
 77f2b6d322857a323c6e97353852349b *R/carmichael.R
@@ -30,7 +30,7 @@ f1b7964731f493937696aca74a19ebf1 *R/primes.R
 62b5374e31005f13f04ac7efc95d416d *R/rabin.R
 ac2333d37f8441103a6e1e34e5746ea1 *R/ratFarey.R
 61a519dcd8333f11b72423ec167d3966 *R/stern_brocot.R
-d73e4eee6063d3436c0ad2b7265ef342 *build/partial.rdb
+44ace39b0b57408ed7ffe13965be4148 *build/partial.rdb
 5151937344ec997522c3f63d406b6b0c *man/GCD.Rd
 e1faa8ce68e39a947c8b7453ff1ee51b *man/IsIntpower.Rd
 8ddebf98f837ace4d061b84152a19719 *man/agm.Rd
@@ -77,7 +77,7 @@ e7676cd4bbd87a7774e3538914edfb1d *man/primroot.Rd
 057b68e98a90158f0c95e2073a6c5493 *man/pythagorean.Rd
 3cae4b89659878ebfe7d6910734d9023 *man/quadratic_residues.Rd
 29693209e0940ed7a7b0083c330baed2 *man/rabin.Rd
-838a90c3bbaa3e9a3e3f19a069a91815 *man/ratFarey.Rd
+d8dff43b8081f2f87e04287c327eb8dc *man/ratFarey.Rd
 284a9e2fd6c883a0afbb2b3fb3a7d1e7 *man/rem.Rd
 abf83a450ded0d13d43882698f98455a *man/sigma.Rd
 67fa2f85309695ec0b2574f504916324 *man/stern_brocot.Rd
