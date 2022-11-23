@@ -1,5 +1,7 @@
 \name{isIntpower}
 \alias{isIntpower}
+\alias{isSquare}
+\alias{isSquarefree}
 \title{
   Powers of Integers
 }
@@ -8,14 +10,21 @@
 }
 \usage{
   isIntpower(p)
+
+  isSquare(p)
+  isSquarefree(p)
 }
 \arguments{
   \item{p}{any integer number.}
 }
 \details{
-  Determines whether \code{p} is the power of an integer and
-  returns a tupel \code{(n, m)} such that \code{p=n^m} where \code{m} is
+  \code{isIntpower(p)} determines whether \code{p} is the power of an integer
+  and returns a tupel \code{(n, m)} such that \code{p=n^m} where \code{m} is
   as small as possible. E.g., if \code{p} is prime it returns \code{c(p,1)}.
+
+  \code{isSquare(p)} determines whether \code{p} is the square of an integer;
+  and \code{isSquarefree(p)} determines if \code{p} contains a square number
+  as a divisor.
 }
 \value{
   A 2-vector of integers.

@@ -5,7 +5,12 @@
 
 isNatural <- function(n) {
     stopifnot(is.numeric(n))
-    floor(n) == ceiling(n) & n >= 1 & n <= 2^53 - 1
+    if (any(floor(n) != ceiling(n)) ||
+        any(n < 1) || any(n > 2^53 - 1)) {
+        return(FALSE)
+    } else {
+        return(TRUE)
+    }
 }
 
 
@@ -61,4 +66,26 @@ isPrimroot <- function(g, p) {
     } else {
         return(FALSE)
     }
+}
+
+
+isSquare <- function(p) {
+    if (floor(p) != ceiling(p) || p < 0)
+        stop("Argument 'p' must be a non-negative integer.")
+    if (p == 0 || p == 1) return(TRUE)
+    pp = isIntpower(p)
+    if (pp[2] == 2) return(TRUE)
+    else return(FALSE)
+}
+
+
+isSquarefree <- function(p) {
+    # Determine whether a square is a divisor of p
+    if (! isNatural(p))
+        stop("Argument 'p' must be a natural number.")
+    pf <- primeFactors(p)
+    if (length(unique(pf)) < length(pf)) {
+        return(FALSE)
+    } else
+        return(TRUE)
 }

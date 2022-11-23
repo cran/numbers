@@ -39,7 +39,7 @@ cf2num(a, b = 1, a0 = 0, finite = FALSE)
   This function is \emph{not} vectorized.
 }
 \seealso{
-  \code{\link{contFrac}}
+  \code{\link{contfrac}}
 }
 \examples{
 ##  Examples from Wolfram Mathworld

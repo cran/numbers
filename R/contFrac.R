@@ -1,20 +1,22 @@
 ##
-##  c o n t F r a c . R  Continuous Fractions
+##  c o n t F r a c . R  Continued Fractions
 ##
 
 
-contFrac <- function(x, tol = 1e-6) {
+contfrac <- function(x, tol = 1e-12) {
     if (!is.numeric(x) || is.matrix(x))
         stop("Argument 'x' must be a numeric scalar or vector.")
 
     if (length(x) > 1) {
         # Compute value of a continuous fraction
         n <- length(x)
+        p <- q <- numeric(n)
         B <- diag(1, 2)
         for (i in seq(along=x)) {
             B <- B %*% matrix(c(x[i], 1, 1, 0), 2, 2)
+            p[i] <- B[1, 1]; q[i] <- B[2, 1]
         }
-        return(B[1,1]/B[2,1])
+        return(list(f = B[1,1]/B[2,1], p = p, q = q, prec = 1/B[2, 1]^2))
 
     } else {
         # Generate the continuous fraction of a value

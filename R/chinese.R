@@ -5,7 +5,8 @@
 
 chinese <- function(a, m) {
     stopifnot(is.numeric(a), is.numeric(m))
-    if (any(!isNatural(m)) || any(floor(a) != ceiling(a)))
+    if (any(floor(m) != ceiling(m)) || any(m < 1) ||
+        any(floor(a) != ceiling(a)))
         stop("Arguments 'a', 'm' must be vectors of integers resp. natural numbers.")
     n <- length(m)
     if (length(a) != n)

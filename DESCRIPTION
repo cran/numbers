@@ -1,20 +1,20 @@
 Package: numbers
 Type: Package
 Title: Number-Theoretic Functions
-Version: 0.8-2
-Date: 2021-05-13
+Version: 0.8-5
+Date: 2022-11-22
 Author: Hans Werner Borchers
 Maintainer: Hans W. Borchers <hwborchers@googlemail.com>
-Depends: R (>= 3.1.0)
+Depends: R (>= 4.1.0)
 Suggests: gmp (>= 0.5-1)
 Description: 
     Provides number-theoretic functions for factorization, prime 
     numbers, twin primes, primitive roots, modular logarithm and
-    inverses, extended GCD, Farey series and continuous fractions.
+    inverses, extended GCD, Farey series and continued fractions.
     Includes Legendre and Jacobi symbols, some divisor functions,
     Euler's Phi function, etc.
 License: GPL (>= 3)
 NeedsCompilation: no
-Packaged: 2021-05-14 17:37:28 UTC; hwb
+Packaged: 2022-11-22 18:59:22 UTC; hwb
 Repository: CRAN
-Date/Publication: 2021-05-14 18:40:06 UTC
+Date/Publication: 2022-11-23 08:10:02 UTC

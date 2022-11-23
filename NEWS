@@ -3,6 +3,24 @@
 ------------------------------------------------------------------------------
 
 
+Version 0.8-5 (2022-11-22)
+
+  o periodicCF() determines the the full and exact period of the 
+    periodic continued fraction of sqrt(d), d a non-square integer.
+  o solvePellsEq() returns the fundamental solution of Pell's equation.
+
+Version 0.8-4 (2022-11-17)
+
+  o contFrac() renamed to contfrac().
+  o contfrac() additionally returns the convergents 'p' and 'q'.
+  o chinese() and isNatural(): Corrected "coerce to logical" bug.
+
+Version 0.8-3 (2022-11-11)
+
+  o Added isSquare() and isSquarefree() for convenience.
+  o Changed the default tolerance of contFrac() to 1e-12.
+  o Corrected some misuses of '&' resp '|'.
+
 Version 0.8-2 (2021-05-13)
 
   o Removed example for farey_seq() from the 'ratFarey' help page

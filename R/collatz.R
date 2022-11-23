@@ -5,7 +5,7 @@ collatz <- function(n, k = 3, l = 1, short = FALSE, check = TRUE) {
               is.logical(short), is.logical(check))
     if ((k %% 2 != 1 && l %% 2 == 0) ||
         (k %% 2 == 0 && l %% 2 == 1))
-        stop("Arguments 'k' must be both even or both odd integers.")
+        stop("Arguments 'k' and 'l' must be both even or both odd integers.")
     if (k == 3 && l == 1) check <- FALSE
     m <- n; cseq = c(n)
     while (n > 1) {

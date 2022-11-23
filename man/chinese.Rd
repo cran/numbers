@@ -8,8 +8,8 @@
 chinese(a, m)
 }
 \arguments{
-  \item{a}{sequence of integers, same length as \code{m}.}
-  \item{m}{sequence of integers, relatively prime to each other.}
+  \item{a}{sequence of integers, of the same length as \code{m}.}
+  \item{m}{sequence of natural numbers, relatively prime to each other.}
 }
 \details{
   The Chinese Remainder Theorem says that given integers \eqn{a_i} and
@@ -17,11 +17,11 @@ chinese(a, m)
   there exists a unique solution \eqn{x = x_i} such that the following
   system of linear modular equations is satisfied:
 
-  \deqn{x_i = a_i \, mod \, m_i, \quad 1 \le i \le n }
+  \deqn{x_i = a_i \, \mod \, m_i, \quad 1 \le i \le n }
 
   More generally, a solution exists if the following condition is satisfied:
 
-  \deqn{a_i = a_j \, mod \, gcd(m_i, m_j)}
+  \deqn{a_i = a_j \, \mod \, \gcd(m_i, m_j)}
 
   This version of the CRT is not yet implemented.
 }
